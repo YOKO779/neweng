@@ -31,7 +31,7 @@ def main():
                 "Chronic pain": [慢性疼痛],
                 "Nutritional status": [营养状态],
                 "HbA1c": [HbA1c],
-                "Charlson comorbidity index": [查尔森共病指数],
+                "CCI": [查尔森共病指数],
                 "Reduced gait speed": [步速下降],
                 "Diabetic nephropathy": [糖尿病肾病]
             }
@@ -81,7 +81,7 @@ def main():
         "Chronic pain": "慢性疼痛",
         "Nutritional status": "营养状态",
         "HbA1c": "HbA1c",
-        "Charlson comorbidity index": "查尔森共病指数",
+        "CCI": "查尔森共病指数",
         "Reduced gait speed": "步速下降",
         "Diabetic nephropathy": "糖尿病肾病"
     }
@@ -99,7 +99,7 @@ def main():
     慢性疼痛 = st.selectbox(column_name_mapping["Chronic pain"] + " (有 = 1, 无 = 0)", [1, 0], index=1)
     营养状态 = st.selectbox(column_name_mapping["Nutritional status"] + " (营养良好 = 0, 营养不良风险 = 1, 营养不良 = 2)", [0, 1, 2], index=1)
     HbA1c = st.number_input(column_name_mapping["HbA1c"] + " (mmol/L)", value=7.0, min_value=4.0, max_value=30.0, step=0.1)
-    查尔森共病指数 = st.number_input(column_name_mapping["Charlson comorbidity index"], value=2, min_value=0, max_value=30, step=1)
+    查尔森共病指数 = st.number_input(column_name_mapping["CCI"], value=2, min_value=0, max_value=30, step=1)
     步速下降 = st.selectbox(column_name_mapping["Reduced gait speed"] + " (是 = 1, 否 = 0)", [1, 0], index=1)
     糖尿病肾病 = st.selectbox(column_name_mapping["Diabetic nephropathy"] + " (有 = 1, 无 = 0)", [1, 0], index=1)
 
