@@ -71,8 +71,6 @@ def main():
                 matplotlib=True
             )
 
-            # 添加标题并渲染图形
-            plt.title("特征贡献力图")
             st.pyplot(plt.gcf())
 
     # 英文列名到中文显示的映射
