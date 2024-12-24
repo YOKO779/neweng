@@ -52,6 +52,9 @@ def main():
             """, unsafe_allow_html=True)
 
             # SHAP 可视化
+            # 设置字体大小
+            plt.rcParams.update({'font.size': plt.rcParams['font.size'] - 1})  # 字体大小减小1号
+            
             explainer = shap.TreeExplainer(lgbm)
             shap_values = explainer.shap_values(df_subject)
 
